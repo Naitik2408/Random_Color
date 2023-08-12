@@ -6,6 +6,8 @@ let r1,g1,b1,a1;
 let n = 0;
 let t1;
 button.addEventListener("click", () => {
+  clearInterval(t1);
+    n = 0;
   r = Math.floor(Math.random() * 256);
   g = Math.floor(Math.random() * 256);
   b = Math.floor(Math.random() * 256);
@@ -24,11 +26,9 @@ button2.addEventListener("click", () => {
       color_box.style.backgroundColor = `rgb(${r1},${g1},${b1},${a1})`;
     }, 100);
     n = 1;
-    console.log(n);
   } else if (n === 1) {
     clearInterval(t1);
     n = 0;
-    console.log(n);
   }
 
 //   color_box.style.backgroundColor = `rgb(${r},${g},${b},${a})`;
